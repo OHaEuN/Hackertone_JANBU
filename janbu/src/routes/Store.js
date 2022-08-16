@@ -3,7 +3,7 @@ import axios from "axios";
 
 function Store() {
     return (
-        <h1>hi</h1>
+        <h1>store</h1>
     );
   }
 
