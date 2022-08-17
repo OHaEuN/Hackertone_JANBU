@@ -1,9 +1,8 @@
 import React from 'react';
 import axios from 'axios';
-import './Search.css';
 
 function Search() {
-	return <h1>search</h1>;
+	return <input placeholder="# 재료입력"></input>;
 }
 
 export default Search;
