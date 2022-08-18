@@ -3,7 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const { recipeRouter } = require('./routes/recipeRoute');
 
-const port = 4000;
+const port = 8000;
 
 const app = express();
 
@@ -63,10 +63,9 @@ const Recipe = mongoose.model("Recipe", recipeSchema);
 
 app.route('/api/recipes')
 .get((req, res) => {
-  console.log(req.query.name);
-  Recipe.find({name: req.query.name }, (err, recipes) => {
+  Recipe.find((err, recipes) => {
     if(!err){
-      res.json(recipes);
+      res.send(recipes);
     }else{
       res.send(err);
     }
@@ -126,4 +125,4 @@ app.route('/api/search')
   });
 })
 
-app.listen(port, () => {console.log(`Server is running on port ${port}`)});
+app.listen(process.env.PORT || port, () => {console.log(`Server is running on port ${port}`)});
