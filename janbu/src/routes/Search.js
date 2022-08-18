@@ -1,11 +1,10 @@
-import React from "react";
-import axios from "axios";
-import './Search.css';
+import React, { useEffect, useState } from "react";
+import SearchBar from "../components/SearchBar";
 
-function Search() {
-    return (
-        <h1>search</h1>
-    );
+
+function Search(){
+  return (
+    <SearchBar/>
+  );
   }
-
 export default Search;
