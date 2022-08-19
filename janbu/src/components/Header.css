@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+* {
+	box-sizing: border-box;
+}
+.icon {
+	font-size: 50px;
+}
+#header {
+	width: 100%;
+	height: 20%;
+	border-bottom: 1.5px solid rgba(0, 0, 0, 0.15);
+}
+#header__wrap {
+	width: 60%;
+	margin: 0 auto;
+	height: 100%;
+}
+#header__top {
+	display: flex;
+	height: 70%;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 30px;
+	color: #88d959;
+}
+#header__top h1 {
+	font-family: 'Dongle', sans-serif;
+	font-size: 70px;
+}
+.title {
+	text-decoration: none;
+	color: #88d959;
+}
+.title:hover {
+	color: #88d959;
+	box-shadow: 0 0.5em 0.5em -0.5em springgreen;
+}
+#header__top__icons {
+	display: flex;
+	gap: 20px;
+}
+#header__bottom {
+	display: flex;
+	height: 30%;
+	justify-content: flex-start;
+	align-items: flex-end;
+	gap: 60px;
+}
+.menu {
+	font-size: 25px;
+	border: none;
+	text-decoration: none;
+	color: grey;
+	padding: 3px;
+}
+.menu:hover {
+	color: #88d959;
+}
+.menu:first-child {
+	color: #88d959;
+	border-bottom: 3px solid #88d959;
+	border-radius: 3px;
+	padding-bottom: 0px;
+}

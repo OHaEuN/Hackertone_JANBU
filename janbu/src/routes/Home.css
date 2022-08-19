@@ -1,103 +1,123 @@
-*{
-    margin:0;
+@font-face {
+	font-family: 'CBNUJIKJI';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202@1.0/CBNUJIKJI.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
-html, body, #root{
-    width:100%;
-    height:100%;
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'CBNUJIKJI';
 }
-#bodyWrap{
-    width:100%;
-    height:100%;
-    background-image: url("../img/home_bg.jpg");
-    background-repeat : no-repeat;
-    background-size : cover;
+
+html,
+body,
+#root {
+	width: 100%;
+	height: 100%;
 }
-#container{
-    width:100%;
-    height:100%;
-    background-color:rgba(0, 0, 0, 0.412);
-    z-index: -1;
+#bodyWrap {
+	width: 100%;
+	height: 100%;
+	background-image: url('../img/home_bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#container {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.412);
+	z-index: -1;
 }
 .arrow,
-.arrow:before{
-    position: absolute;
-    left: 50%;
+.arrow:before {
+	position: absolute;
+	left: 50%;
 }
-  
 
-.arrow{
-    width: 40px;
-    height: 40px;
-    top: -40%;
-    margin: -20px 0 0 -20px;
-    -webkit-transform: rotate(45deg);
-    border-left: none;
-    border-top: none;
-    border-right: 2px rgb(89, 244, 118) solid;
-    border-bottom: 2px rgb(89, 244, 118) solid;
+.arrow {
+	width: 40px;
+	height: 40px;
+	top: -40%;
+	margin: -10px 0 0 -20px;
+	-webkit-transform: rotate(45deg);
+	border-left: none;
+	border-top: none;
+	border-right: 4px rgb(89, 244, 118) solid;
+	border-bottom: 4px rgb(89, 244, 118) solid;
 }
-  
 
-  
-.arrow:before{
-    content: '';
-    width: 20px;
-    height: 20px;
-    top: 50%;
-    margin: -10px 0 0 -11px;
-    border-left: none;
-    border-top: none;
-    border-right: 1px rgb(89, 244, 118) solid;
-    border-bottom: 1px rgb(89, 244, 118) solid;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-name: arrow;
+.arrow:before {
+	content: '';
+	width: 20px;
+	height: 20px;
+	top: 50%;
+	margin: -10px 0 0 -11px;
+	border-left: none;
+	border-top: none;
+	border-right: 3px rgb(89, 244, 118) solid;
+	border-bottom: 3px rgb(89, 244, 118) solid;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-name: arrow;
 }
-  
-  
-@keyframes arrow{
-    0% {opacity: 1;}
-    100% {opacity: 0;
-    transform: translate(-10px, -10px);}
+
+@keyframes arrow {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: translate(-10px, -10px);
+	}
 }
-  
+
 #selectWrap {
-    position:absolute;
-    top: 50%;
-    left: 14%;
+	position: absolute;
+	top: 50%;
+	left: 14%;
 }
-  
-#selectWrap h2{
-    position:absolute;
-    top: -130%;
-    left: 5%;
-    color:whitesmoke;
+
+#selectWrap h2 {
+	position: absolute;
+	top: -130%;
+	left: 5%;
+	color: whitesmoke;
+	font-size: 33px;
 }
-#selectWrap h1{
-    position:absolute;
-    top: -90%;
-    left: 5%;
-    font-size: 41px;
-    color:rgb(89, 244, 118);
+#selectWrap h1 {
+	position: absolute;
+	top: -90%;
+	left: 5%;
+	font-size: 40px;
+	color: rgb(89, 244, 118);
 }
 #selectWrap .selectBtn {
-    width: 180px;
-    height: 180px;
-    text-align: center;
-    font-size: 1em;
-    color:rgb(255, 255, 255);
-    font-weight:700;
-    margin: 0 20px;
-    background-color:rgb(89, 244, 118);
-    border: 1px solid rgb(89, 244, 118);
-    border-radius: 50%;
+	width: 180px;
+	height: 180px;
+	padding: 25px;
+	text-align: center;
+	color: rgb(255, 255, 255);
+	font-weight: 700;
+	margin: 0 20px;
+	background: linear-gradient(
+		45deg,
+		rgba(20, 167, 62, 1) 0%,
+		rgba(255, 255, 255, 0.1) 100%
+	);
+	background-color: rgb(89, 244, 118);
+	border-radius: 50%;
+	box-shadow: 0 0.7em 1.5em -0.5em springgreen;
 }
 #selectWrap .selectBtn p {
-    font-size: 5em;
-    margin:0;
+	font-size: 33px;
+	margin-top: 20px;
+	font-family: 'Jua', sans-serif;
 }
 
 #selectWrap .selectBtn:hover {
-    background-color:rgb(73, 210, 98);
-    border: 1px solid rgb(73, 210, 98);
+	background-color: rgb(73, 210, 98);
+	border: 2px solid white;
 }
