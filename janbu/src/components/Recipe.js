@@ -12,6 +12,7 @@ function Recipe() {
           console.log(res)
           document.querySelector("#recipeTitle").innerHTML=`${res.data[0].name}`;
           document.querySelector("#recipeDes").innerHTML=`${res.data[0].content}`;
+          // const recipeimg= res.data[0].
       }
       fetchEvents();
     },[])

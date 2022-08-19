@@ -1,5 +1,6 @@
 import React, { useState,useEffect } from "react";
 import Recipe from './Recipe';
+import Recipe2 from './Recipe2';
 import { axios } from 'axios';
 
 function SearchResult (props){
@@ -13,26 +14,34 @@ function SearchResult (props){
     fetchEvents();
     },[])
 
-    const searchValue = props;
 
+    
+    const searchValue = props;
+    
+    console.log(searchValue.props.length);
     return (
         <>
-            {searchValue.props === "" ?
+            {searchValue.props.length === 0 ?
                 <>
                     <h3>오늘 이 메뉴는 어때요?</h3>
                     {/* for(let i = 0; i < arrayLength; i++){
                         <Recipe props={i}/>
                     } */}
+                    <Recipe />
+                    <Recipe2 />
                 </>
                 
                 : 
                 <>
+                    
                     <h3>"{searchValue.props}" 검색 결과입니다.</h3>
+                    
                     {/* <Recipe props={searchValue}/> */}
+                    <Recipe />
                 </>
                 
             }
-            <Recipe />
+            
         </>
             
     );
