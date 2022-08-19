@@ -108,7 +108,7 @@ body,
 	);
 	background-color: rgb(89, 244, 118);
 	border-radius: 50%;
-	box-shadow: 0 0.7em 1.5em -0.5em black;
+	box-shadow: 0 0.7em 1.5em -0.5em springgreen;
 }
 #selectWrap .selectBtn p {
 	font-size: 33px;
