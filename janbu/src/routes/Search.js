@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from "react";
-import SearchBar from "../components/SearchBar";
-import axios from "axios";
+import React, { useEffect, useState } from 'react';
+import SearchBar from '../components/SearchBar';
+import Header from '../components/Header';
 
-function Search(){
-  return (
-    <SearchBar/>
-      
-  );
-  }
+const Search = () => {
+	return (
+		<>
+			<Header />
+			<SearchBar />;
+		</>
+	);
+};
+
 export default Search;
