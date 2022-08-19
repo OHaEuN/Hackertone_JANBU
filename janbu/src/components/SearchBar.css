@@ -1,0 +1,24 @@
+@font-face {
+	font-family: 'CBNUJIKJI';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202@1.0/CBNUJIKJI.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+* {
+	box-sizing: border-box;
+	font-family: 'CBNUJIKJI';
+}
+#search {
+	width: 100%;
+	height: 80%;
+	padding-top: 3%;
+}
+#search__wrap {
+	width: 60%;
+	height: 100%;
+	border-radius: 20px;
+	margin: 0 auto;
+	border: 1px solid black;
+	background-color: white;
+}
