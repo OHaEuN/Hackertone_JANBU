@@ -5,19 +5,19 @@ import './SearchBar.css';
 function SearchBar(){
   const [keywordArray, addKeywordToArray] = useState([]);
   const [keyword, setKeyword] = useState("");
-  const handleAdd = () => {
-    console.log("키워드 배열에 추가함");
-    addKeywordToArray([keyword, ...keywordArray]);
+  const handleAdd = (event) => {
+    if (event.key === 'Enter' || event.key === 'Spacebar') {
+      console.log("키워드 배열에 추가함");
+      addKeywordToArray([keyword, ...keywordArray]);
+      return setKeyword('');
+      // Enter 입력이 되면 클릭 이벤트 실행
+		}
   };
   const handleSearchClick = () => {
     console.log(keywordArray);
   };
   const onChange = (event) => setKeyword(event.target.value);
-  const handleOnKeyPress = (event) => {
-		if (event.key === 'Enter') {
-			handleAdd(); // Enter 입력이 되면 클릭 이벤트 실행
-		}
-	};
+  
 
   
 
@@ -37,7 +37,7 @@ function SearchBar(){
         <input
           value={keyword}
           onChange={onChange}
-          onKeyPress={handleOnKeyPress}
+          onKeyPress={handleAdd}
           type="text"
           placeholder="키워드 입력"
         />
