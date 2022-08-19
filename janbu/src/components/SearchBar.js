@@ -3,17 +3,26 @@ import SearchResult from "./SearchResult";
 
 
 function SearchBar(){
-  const [searchValue, setValue] = useState("");
+  const [keywordArray, addKeywordToArray] = useState([]);
   const [keyword, setKeyword] = useState("");
-  const onClick = () => setValue(keyword);
+  const handleAddClick = () => {
+    addKeywordToArray([keyword, ...keywordArray]);
+  };
+  const handleSearchClick = () => {
+    console.log(keywordArray);
+
+  };
   const onChange = (event) => setKeyword(event.target.value);
+  
 
   useEffect(() => {
     console.log("I run when 'keyword' changes.");
   }, [keyword]);
   useEffect(() => {
-    console.log("Search keyword");
-  }, [searchValue]);
+    console.log("add keyword for searching");
+  }, [keywordArray]);
+
+
   
 
   return (
@@ -23,10 +32,13 @@ function SearchBar(){
         onChange={onChange}
         type="text"
         placeholder="키워드 입력"
-      />
-      <button type="submit" onClick={onClick}>검색</button>
+      >
+        <button type="submit" onClick={handleSearchClick}>검색</button>
+      </input>
+      <button type="submit" onClick={handleAddClick}>재료 추가</button>
+      
       <div id="result">
-        <SearchResult props={searchValue}/>
+        <SearchResult props={keyword}/>
       </div>
     </div>
   );
