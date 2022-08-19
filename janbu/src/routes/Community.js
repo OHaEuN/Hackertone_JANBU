@@ -5,10 +5,8 @@ import axios from "axios";
 function Community () {
     useEffect(() => {
         const fetchEvents = async () => {
-            var key = "계란말이"
-            const res = await axios.get(`https://whispering-mesa-62448.herokuapp.com/api/recipes/search?kw=${key}`)
+            const res = await axios.get("https://whispering-mesa-62448.herokuapp.com/api/recipes")
             console.log(res)
-            document.querySelector(".contents").innerHTML=`${res.data[600].Deaths}명 사망`;
         }
         fetchEvents();
     })
