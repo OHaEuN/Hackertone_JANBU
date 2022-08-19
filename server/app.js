@@ -139,7 +139,7 @@ app.route('/api/recipes/:recipe_id')
 
 app.route('/api/search')
 .get((req, res) => {
-  Recipe.find({$text: {$search: req.query.kw}}, (err, foundRecipes) => {
+  Recipe.find({name: {$regex: req.query.kw}}, (err, foundRecipes) => {
     if(!err){
       res.send(foundRecipes);
     }else{
@@ -148,7 +148,7 @@ app.route('/api/search')
   })
 })
 .post((req, res) => {
-  Recipe.aggregate([{$match: { materials: { $lte: req.body.materials}}}], (err, foundRecipes) => {
+  Recipe.aggregate([{$match: { materials: { $all: req.body.materials}}}], (err, foundRecipes) => {
     if(!err){
       res.send(foundRecipes);
     }else{
