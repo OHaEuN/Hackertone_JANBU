@@ -17,6 +17,7 @@ function SearchBar() {
 	const handleOnKeyPress = (event) => {
 		if (event.key === 'Enter') {
 			handleAdd(); // Enter 입력이 되면 클릭 이벤트 실행
+			return setKeyword(() => '');
 		}
 	};
 
