@@ -1,11 +1,13 @@
-import React from "react";
-import axios from "axios";
-import './Search.css';
+import SearchBar from '../components/SearchBar';
+import Header from '../components/Header';
 
-function Search() {
-    return (
-        <h1>search</h1>
-    );
-  }
+const Search = () => {
+	return (
+		<>
+			<Header />
+			<SearchBar />
+		</>
+	);
+};
 
 export default Search;
