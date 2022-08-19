@@ -10,7 +10,9 @@ function Header() {
 		<div id="header">
 			<div id="header__wrap">
 				<div id="header__top">
-					<h1>잔반을 부탁해</h1>
+					<Link className="title" to="/">
+						<h1>잔반을 부탁해</h1>
+					</Link>
 					<div id="header__top__icons">
 						<BiSearchAlt className="icon" />
 						<BsPencil className="icon" />
