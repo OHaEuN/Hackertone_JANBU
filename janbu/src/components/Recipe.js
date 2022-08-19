@@ -1,8 +1,9 @@
+
 import React, {useEffect} from "react";
 import axios from "axios";
-import {recipeimg} from '../img/recipeimg.png';
 
-function Recipe(i) {
+
+function Recipe() {
 
 
     useEffect(() => {
@@ -26,5 +27,4 @@ function Recipe(i) {
       
     );
   }
-
 export default Recipe;

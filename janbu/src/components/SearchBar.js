@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import SearchResult from "./SearchResult";
-
+import React, { useEffect, useState } from 'react';
+import SearchResult from './SearchResult';
+import './SearchBar.css';
 
 function SearchBar(){
   const [keywordArray, addKeywordToArray] = useState([]);

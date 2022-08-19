@@ -27,6 +27,14 @@
 	font-family: 'Dongle', sans-serif;
 	font-size: 70px;
 }
+.title {
+	text-decoration: none;
+	color: #88d959;
+}
+.title:hover {
+	color: #88d959;
+	box-shadow: 0 0.5em 0.5em -0.5em springgreen;
+}
 #header__top__icons {
 	display: flex;
 	gap: 20px;
