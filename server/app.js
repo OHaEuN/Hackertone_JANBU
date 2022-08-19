@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.static("public"));
 app.use('/recipe', recipeRouter);
 
-mongoose.connect("mongodb://localhost:27017/janbuDB", () => {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/janbuDB", () => {
   console.log("Successfully connected to mongodb.")
 });
 
@@ -60,7 +60,10 @@ const recipeSchema = new mongoose.Schema({
 const Recipe = mongoose.model("Recipe", recipeSchema);
 
 /*--------------------------API--------------------------*/
-
+app.route('/')
+.get((req, res) => {
+  res.send("--Janbu API server--");
+})
 app.route('/api/recipes')
 .get((req, res) => {
   Recipe.find((err, recipes) => {
@@ -115,10 +118,19 @@ app.route('/api/recipes/:recipe_id')
 });
 
 app.route('/api/search')
-.post((req, res) => {
-  Recipe.aggregate([{$match: { materials: { $lte: req.body.materials}}}], (err, foundRecipe) => {
+.get((req, res) => {
+  Recipe.find({name: {$gte: req.params.kw}}, (err, foundRecipes) => {
     if(!err){
-      res.send(foudnRecipe);
+      res.send(foundRecipes);
+    }else{
+      res.send(err);
+    }
+  })
+})
+.post((req, res) => {
+  Recipe.aggregate([{$match: { materials: { $lte: req.body.materials}}}], (err, foundRecipes) => {
+    if(!err){
+      res.send(foudnRecipes);
     }else{
       res.send(err);
     }
