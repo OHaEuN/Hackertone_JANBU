@@ -10,7 +10,6 @@ function SearchBar(){
     addKeywordToArray([keyword, ...keywordArray]);
   };
   const handleSearchClick = () => {
-
     console.log(keywordArray);
   };
   const onChange = (event) => setKeyword(event.target.value);
@@ -25,9 +24,9 @@ function SearchBar(){
   useEffect(() => {
     console.log("I run when 'keyword' changes.");
   }, [keyword]);
-  useEffect(() => {
-    console.log("add keyword for searching");
-  }, [keywordArray]);
+  // useEffect(() => {
+  //   console.log("add keyword for searching");
+  // }, [keywordArray]);
 
 
   
@@ -45,7 +44,7 @@ function SearchBar(){
         <button type="submit" onClick={handleSearchClick}>검색</button>
       </div>      
       <div id="result">
-        <SearchResult props={keyword}/>
+        <SearchResult props={keywordArray}/>
       </div>
     </div>
   );

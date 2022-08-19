@@ -2,7 +2,7 @@ import React, {useEffect} from "react";
 import axios from "axios";
 import {recipeimg} from '../img/recipeimg.png';
 
-function Recipe() {
+function Recipe(i) {
 
 
     useEffect(() => {
@@ -13,7 +13,7 @@ function Recipe() {
           document.querySelector("#recipeDes").innerHTML=`${res.data[0].content}`;
       }
       fetchEvents();
-    })
+    },[])
 
     return (
       <div className="recipeComponetWrap">
