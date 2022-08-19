@@ -51,7 +51,7 @@ function SearchBar() {
 						<div>메뉴로 검색하기 ></div>
 					</div>
 				</div>
-				<SearchResult props={keyword} />
+				<SearchResult props={keywordArray} />
 			</div>
 		</div>
 	);
