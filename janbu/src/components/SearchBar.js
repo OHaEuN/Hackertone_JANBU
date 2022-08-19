@@ -11,7 +11,7 @@ function SearchBar() {
 			console.log('키워드 배열에 추가함');
 			addKeywordToArray([keyword, ...keywordArray]);
 			return setKeyword('');
-			// Enter 입력이 되면 클릭 이벤트 실행
+			// Enter 입력이 되면 클릭 이벤트 실행, 스페이스도 추가 하고싶은데 방법 모르겠음 ㅠ
 		}
 	};
 	const handleSearchClick = () => {
