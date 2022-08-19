@@ -1,6 +1,17 @@
-import React, { useEffect, useState } from "react";
-import SearchResult from "./SearchResult";
+import React, { useEffect, useState } from 'react';
+import SearchResult from './SearchResult';
+import './SearchBar.css';
 
+function SearchBar() {
+	const [searchValue, setValue] = useState('');
+	const [keyword, setKeyword] = useState('');
+	const onClick = () => setValue(keyword);
+	const onChange = (event) => setKeyword(event.target.value);
+	const handleOnKeyPress = (event) => {
+		if (event.key === 'Enter') {
+			onClick(); // Enter 입력이 되면 클릭 이벤트 실행
+		}
+	};
 
 function SearchBar(){
   const [keywordArray, addKeywordToArray] = useState([]);

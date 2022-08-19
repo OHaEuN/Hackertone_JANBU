@@ -5,7 +5,7 @@ import axios from "axios";
 function Community () {
     useEffect(() => {
         const fetchEvents = async () => {
-            const res = await axios.get("https://whispering-mesa-62448.herokuapp.com/api/recipes")
+            const res = await axios.get("https://api.covid19api.com/total/dayone/country/kr")
             console.log(res)
             document.querySelector(".contents").innerHTML=`${res.data[600].Deaths}명 사망`;
         }
