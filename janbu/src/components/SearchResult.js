@@ -31,8 +31,7 @@ function SearchResult(props) {
 						<Recipe className="recipe__item" />
 						<Recipe className="recipe__item" />
 						<Recipe className="recipe__item" />
-						<Recipe2 className="recipe__item" />
-						<Recipe2 className="recipe__item" />
+						<Recipe className="recipe__item" />
 					</div>
 				</div>
 			) : (

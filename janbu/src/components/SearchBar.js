@@ -7,11 +7,10 @@ function SearchBar() {
 	const [keywordArray, addKeywordToArray] = useState([]);
 	const [keyword, setKeyword] = useState('');
 	const handleAdd = (event) => {
-		if (event.key === 'Enter' || event.key === 'Spacebar') {
+		if (event.key === 'Enter' || event.key === 'Space') {
 			console.log('키워드 배열에 추가함');
-			addKeywordToArray([keyword, ...keywordArray]);
+			addKeywordToArray(current => [keyword, ...current]);
 			return setKeyword('');
-			// Enter 입력이 되면 클릭 이벤트 실행
 		}
 	};
 	const handleSearchClick = () => {
@@ -48,10 +47,10 @@ function SearchBar() {
 						</button>
 					</div>
 					<div id="textbox">
-						<div>메뉴로 검색하기 ></div>
+						<div>메뉴로 검색하기 </div>
 					</div>
 				</div>
-				<SearchResult props={keyword} />
+				<SearchResult props={keywordArray} />
 			</div>
 		</div>
 	);
